@@ -1,0 +1,4 @@
+2025-07-02T20:33:37: Traceback (most recent call last):
+2025-07-02T20:33:37:   File "C:\Users\kawis\OneDrive\Desktop\data science lectures\final year project 2\kawish\frontend\scripts\recommendations\train_model.py", line 3, in <module>
+2025-07-02T20:33:37:     from dotenv import load_dotenv
+2025-07-02T20:33:37: ModuleNotFoundError: No module named 'dotenv'

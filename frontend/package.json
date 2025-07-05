@@ -1,0 +1,45 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "migrate:restaurants": "node scripts/migrateRestaurants.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "@heroicons/react": "^2.2.0",
+    "@maxmind/geoip2-node": "^6.1.0",
+    "@upstash/ratelimit": "^2.0.5",
+    "@upstash/redis": "^1.35.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.0",
+    "framer-motion": "^12.6.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.475.0",
+    "mongoose": "^8.10.1",
+    "next": "^15.2.1",
+    "openai": "^4.86.2",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-heart": "^1.0.6",
+    "react-hot-toast": "^2.5.2",
+    "react-toastify": "^11.0.5",
+    "sharp": "^0.33.5",
+    "socket.io": "^4.8.1",
+    "sonner": "^2.0.1",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^15.2.1",
+    "@tailwindcss/postcss": "^4.0.12",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  }
+}

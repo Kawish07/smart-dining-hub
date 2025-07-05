@@ -1,0 +1,8 @@
+/* Card.module.css */
+.cardButton {
+    background-color: #6b4423;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
