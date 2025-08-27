@@ -45,8 +45,12 @@ export async function GET(request) {
     const slug = searchParams.get("slug");
     const id = searchParams.get("id");
 
+
     const connection = await connectToDb();
     const db = connection.connection.db;
+    console.log('Connected to DB:', db.databaseName);
+    const collections = await db.listCollections().toArray();
+    console.log('Collections:', collections.map(c => c.name));
     const restaurantsCollection = db.collection("restaurants");
     const reviewsCollection = db.collection("reviews");
 
@@ -55,6 +59,7 @@ export async function GET(request) {
     if (slug) {
       // Fetch single restaurant by slug
       const restaurant = await restaurantsCollection.findOne({ slug });
+      console.log('Find by slug:', slug, 'Result:', restaurant);
       if (!restaurant) {
         return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
       }
@@ -62,6 +67,7 @@ export async function GET(request) {
     } else if (id) {
       // Fetch single restaurant by ID
       const restaurant = await restaurantsCollection.findOne({ _id: new ObjectId(id) });
+      console.log('Find by ID:', id, 'Result:', restaurant);
       if (!restaurant) {
         return NextResponse.json({ error: "Restaurant not found" }, { status: 404 });
       }
@@ -69,6 +75,7 @@ export async function GET(request) {
     } else {
       // Fetch all restaurants
       restaurants = await restaurantsCollection.find({}).toArray();
+      console.log('All restaurants count:', restaurants.length);
     }
 
     // Calculate ratings for each restaurant

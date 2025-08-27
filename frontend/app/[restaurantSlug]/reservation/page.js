@@ -60,7 +60,7 @@ export default function Reservation() {
       try {
         if (!params?.restaurantSlug) return;
 
-        const response = await fetch(`/api/restaurants/slug/${params.restaurantSlug}`);
+  const response = await fetch(`/api/restaurants?slug=${params.restaurantSlug}`);
         if (!response.ok) throw new Error("Failed to fetch restaurant");
 
         const data = await response.json();
