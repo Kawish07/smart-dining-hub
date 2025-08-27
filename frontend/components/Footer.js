@@ -50,26 +50,7 @@ export default function Footer() {
         </div>
         
         {/* Dashboards */}
-        <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
-          <a 
-            href="/Admindashboard" 
-            className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500 transition-all duration-300 flex items-center justify-center space-x-2 border border-transparent hover:border-white shadow-lg hover:shadow-emerald-700/50"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-            </svg>
-            <span>Admin Dashboard</span>
-          </a>
-          <a 
-            href="/staff/dashboard" 
-            className="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-500 transition-all duration-300 flex items-center justify-center space-x-2 border border-transparent hover:border-white shadow-lg hover:shadow-teal-700/50"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-            <span>Staff Dashboard</span>
-          </a>
-        </div>
+        
       </div>
       
       {/* Bottom section */}
