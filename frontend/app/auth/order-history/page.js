@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { History, ChevronLeft, Loader2, AlertCircle, Star, X } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
-import ReviewForm from "./ReviewForm";
+import ReviewForm from "@/components/ReviewForm";
 
 export default function OrderHistoryPage() {
   const [orders, setOrders] = useState([]);

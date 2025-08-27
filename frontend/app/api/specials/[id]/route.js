@@ -1,7 +1,7 @@
 // app/api/specials/[id]/route.js
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/mongodb";
-import Special from "@/models/Special";
+import Special from "@/models/special";
 import mongoose from "mongoose";
 
 // DELETE handler - Delete a special dish
