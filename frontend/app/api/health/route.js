@@ -1,11 +1,11 @@
-import { connectDB } from "@/lib/mongodb";
+import connectToDb from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
-    const db = await connectDB();
+    const db = await connectToDb();
     
     // Test database connection
     await db.connection.db.command({ ping: 1 });

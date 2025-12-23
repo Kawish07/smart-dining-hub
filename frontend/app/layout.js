@@ -6,7 +6,6 @@ import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
 import { RestaurantProvider } from "@/context/RestaurantContext"; // Import RestaurantProvider
 import CustomSessionProvider from "@/context/SessionProvider";
-import { getServerSession } from "next-auth"; // Import getServerSession
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { SpecialDishesProvider } from "@/context/SpecialDishesContext"; 
 
@@ -27,7 +26,7 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   // Fetch the session on the server side
-  const session = await getServerSession(authOptions);
+  const session = null; // Session will be handled client-side
   console.log("Server-side session:", session);
 
   return (

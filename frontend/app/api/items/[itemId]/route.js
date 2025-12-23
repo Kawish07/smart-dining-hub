@@ -1,7 +1,6 @@
 // app/api/items/[itemId]/route.js
 import connectToDb from "@/lib/mongodb";
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 export const dynamic = 'force-dynamic';
@@ -22,9 +21,8 @@ export async function GET(request, { params }) {
     const itemsCollection = db.collection("items");
     const reviewsCollection = db.collection("reviews");
     
-    // Get current user session
-    const session = await getServerSession(authOptions);
-    const userId = session?.user?.id;
+    // Get current user session - handled client-side with next-auth v5
+    const userId = null;
 
     // Get item details
     const item = await itemsCollection.findOne({ _id: itemId });

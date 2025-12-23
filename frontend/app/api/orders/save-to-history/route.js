@@ -1,5 +1,5 @@
 // app/api/orders/history/route.js
-import { connectToDb } from "@/lib/mongodb";
+import connectToDb from "@/lib/mongodb";
 import Order from "@/models/Order";
 
 export async function GET(request) {

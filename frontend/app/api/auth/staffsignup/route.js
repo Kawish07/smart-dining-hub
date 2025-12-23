@@ -1,10 +1,10 @@
-import { connectDB } from "@/lib/mongodb";
+import connectToDb from "@/lib/mongodb";
 import Staff from "@/models/Staff";
 import bcrypt from "bcrypt";
 
 export async function POST(req) {
   try {
-    await connectDB();
+    await connectToDb();
     console.log("✅ Connected to MongoDB");
 
     // Parse incoming request data

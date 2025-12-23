@@ -1,5 +1,5 @@
 // pages/api/recommendations/popular.js
-import { connectToDatabase } from '@/lib/mongodb';
+import connectToDb from '@/lib/mongodb';
 
 export default async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -7,7 +7,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { db } = await connectToDatabase();
+    const mongoose = await connectToDb();
+    const db = mongoose.connection.db;
     
     const popularItems = await db.collection('orders').aggregate([
       { $unwind: '$items' },

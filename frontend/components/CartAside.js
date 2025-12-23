@@ -237,7 +237,7 @@ export default function CartAside({ setCartOpen }) {
                   group/checkout border border-emerald-400/20
                 "
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 translate-x-[-100%] group-hover/checkout:translate-x-[100%] transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover/checkout:translate-x-full transition-transform duration-700" />
                 <Zap className="relative z-10 group-hover/checkout:animate-pulse" size={20} />
                 <span className="relative z-10">Proceed to Payment</span>
                 <CreditCard className="relative z-10 group-hover/checkout:rotate-12 transition-transform duration-300" size={20} />

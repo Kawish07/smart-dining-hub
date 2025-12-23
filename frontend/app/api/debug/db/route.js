@@ -1,5 +1,5 @@
 // app/api/debug/db/route.js
-import { connectToDb } from "@/lib/mongodb";
+import connectToDb from "@/lib/mongodb";
 import Order from "@/models/Order";
 import OrderHistory from "@/models/OrderHistory";
 
